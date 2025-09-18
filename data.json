@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1756054834835,
+    "name": "moto9",
+    "price": "10000",
+    "brand": "motorala"
+  },
+  {
+    "id": 1756057979039,
+    "name": "moto12",
+    "price": "12000",
+    "brand": "motorala"
+  },
+  {
+    "id": 1756094638503,
+    "name": "iphone 15 pro max",
+    "price": "100000",
+    "brand": "apple"
+  },
+  {
+    "id": 1756111831531,
+    "name": "vivo note",
+    "price": "15000",
+    "brand": "vivo"
+  },
+  {
+    "id": 1756137845057,
+    "name": "vivo note 15",
+    "price": "40000",
+    "brand": "vivo"
+  }
+]

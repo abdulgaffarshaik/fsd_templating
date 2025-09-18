@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/products-form" method="GET" style="margin: 10px 0; ">
+        <button type="submit" style="padding: 5px;">Add New Product</button>
+    </form>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(product => { %>
+                <tr>
+                    <td><%= product.name %></td>
+                    <td>$<%= product.price %></td>
+                    <td><%= product.brand %></td>
+                    <td>
+                        <form action="/products/<%= product.id%>" style="display: inline;">
+                            <button type="submit" >View</button>
+                        </form>
+                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <form action="/products-form/<%= product.id %>" method="GET" style="display:inline;">
+                            <button type="submit">Edit</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+</body>
+</html>
